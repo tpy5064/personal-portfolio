@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUser, FaUserGraduate, FaMedal, FaPhone } from "react-icons/fa";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { HiDotsVertical } from "react-icons/hi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <BsThreeDotsVertical className="nav-icons" />
+            <HiDotsVertical className="nav-icons" />
             <span className="link-text glow">Extras</span>
           </a>
         </li>
