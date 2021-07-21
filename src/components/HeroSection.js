@@ -1,12 +1,11 @@
 import React from "react";
-import { BsArrowsExpand } from "react-icons/bs";
+import SkewDrag from "./SkewDrag";
 
 const HeroSection = () => {
   document.addEventListener("DOMContentLoaded", function () {
     let wrapper = document.getElementById("hero-wrapper");
     let topLayer = wrapper.querySelector(".hero-top");
     let handle = wrapper.querySelector(".hero-handle");
-		let dragBtn = wrapper.querySelector(".hero-drag");
     let skew = 0;
     let delta = 0;
 
@@ -21,12 +20,6 @@ const HeroSection = () => {
 
       topLayer.style.width = e.clientX + skew + delta + "px";
     });
-
-		dragBtn.addEventListener("ondragstart", function(e) {
-			dragBtn.style.left = e.clientX + "px";
-			dragBtn.style.cursor = "pointer";
-		})
-
   });
 
   return (
@@ -34,9 +27,18 @@ const HeroSection = () => {
       <div className="hero-layer hero-top">
         <div className="hero-content-wrap">
           <div className="hero-content-body">
+            <div className="hero-content-card-top">
+              <p>
+                My name, with 3 Chinese characters: <br /> The willow tree, the
+                sky and the mythical Chinese beast, the Qilin.
+              </p>
+            </div>
+          </div>
+          <div className="hero-chinese-poem">
             <p>
-              My name, with 3 Chinese characters: <br /> The willow tree, the
-              sky and the mythical Chinese beast, the Qilin.
+              宝剑锋从磨砺出
+              <br />
+              梅花香自苦寒来
             </p>
           </div>
           <svg className="chinese-name" viewBox="0 0 865 258">
@@ -153,11 +155,13 @@ const HeroSection = () => {
       <div className="hero-layer hero-bottom">
         <div className="hero-content-wrap">
           <div className="hero-content-body">
-            <p>
+						<div className="hero-content-card-bottom">
+						<p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
               maiores dolore fugiat eos eligendi aliquam atque in ipsum
               accusantium sunt?
             </p>
+						</div>
           </div>
           <svg className="english-name" viewBox="0 0 1791 304">
             <g>
@@ -267,9 +271,6 @@ const HeroSection = () => {
             </g>
           </svg>
         </div>
-      </div>
-      <div className="hero-drag">
-        <BsArrowsExpand className="hero-drag-icon" />
       </div>
       <div className="hero-handle"></div>
     </section>

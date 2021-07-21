@@ -1,0 +1,22 @@
+.hero-drag {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--accent-gold);
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-drag .hero-drag-icon {
+  position: absolute;
+  color: var(--bg-primary);
+  transform: rotate(90deg);
+  width: 70%;
+  height: 70%;
+}
